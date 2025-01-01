@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-    int bNum, D = 0, pwr;
+    int bNum, D = 0, pwr = 0;
     cout << "Hello, This is a simple program to convert Binary numbers into Decimal" << endl;
     cout << "Please Enter the binary number: ";
     cin >> bNum;
