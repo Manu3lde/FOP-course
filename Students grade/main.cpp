@@ -25,12 +25,21 @@ int main() {
         cin.ignore();
         cout << "Student Name: ";
         getline(cin, studentNames[i]);
-        cout << "Math Score: ";
+        score:
+        cout << "Math Score out of 100: ";
         cin >> mathScores[i];
-        cout << "FOP Score: ";
+        cout << "FOP Score out of  100: ";
         cin >> fopScores[i];
-        cout << "Probability Score: ";
+        cout << "Probability Score out of 100: ";
         cin >> probScores[i];
+        if(((mathScores[i] < 0) && (mathScores[i] > 100)) || ((fopScores[i] < 0) && (fopScores[i] > 100)) || ((probScores[i] < 0) && (probScores[i] > 100))){
+            cout<<"****************Score Saved!****************"<<endl;
+        }
+        else{
+            cout<<"****************Invalid Score Entered****************"<<endl;
+            cout<<"****************Please Enter the a valid Score*******"<<endl;
+            goto: score;
+        }
     }
     for(int i = 0; i < studentCount; i++){
         totalScores[i] = mathScores[i] + fopScores[i] + probScores[i];
@@ -56,7 +65,7 @@ int main() {
         cout<<endl;
 
     }
-
-    cout<<"The maximum score is "<<average[]
+    //using bubble sort to find the Maximum
+    //cout<<"The maximum score is "<<average[]
     return 0;
 }
